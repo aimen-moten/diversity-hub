@@ -1,0 +1,263 @@
+:root {
+    --borderRadius: 16px;
+    --bgColor: white;
+    --lineHeight: 0.5vh;
+    --lineWidth: 70%;
+    --underLineColor: red;
+    --hamburgerMargin-right: 2%;
+    --font-color: black;
+}
+
+.navLink {
+    text-decoration: none;
+    padding: 0%;
+    margin: 0%;
+}
+
+.navBar {
+    height: 12vh;
+    width: 100%;
+    background-color: #B1B2FF;
+    padding: 0%;
+    margin: 0%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0%;
+    z-index: 100;
+}
+
+.mobileBox {
+    height: 80%;
+    width: 8%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* background-color: #121212; */
+    border-radius: 1.4rem;
+}
+
+.imageIcon {
+    height: 100%;
+    width: 100%;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 50px;
+}
+
+.navList {
+    width: 80%;
+    height: 100%;
+    margin-right: 4%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ulList {
+    width: 70%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    /* border-radius: 0.8rem;
+    background-color: #3a3d47; */
+    padding: 0% 10px 0px 10px;
+}
+
+.liBox {
+    width: max-content;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.ulList li {
+    cursor: pointer;
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 250ms;
+}
+
+.ulList li:hover {
+    color: royalblue;
+}
+
+
+.button {
+    cursor: pointer;
+    height: 5vh;
+    width: 15%;
+    height: 60%;
+    color: white;
+    background-color: royalblue;
+    border-radius: 30px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border: none;
+    /* border: 2px solid royalblue; */
+}
+
+.button:hover {
+    background-color: #3a3d47;
+}
+
+.lineBox {
+    position: absolute;
+    display: none;
+}
+
+.change {
+    display: none;
+}
+
+@media (max-width: 481px) {
+    .mobileBox {
+        border-radius: 0%;
+        height: 80%;
+        width: 20%;
+    }
+
+    .navBar {
+        background-color: #3a3d47;
+        transition: height 500ms;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+        width: 100%;
+        /* background-color: #121212; */
+    }
+
+    .button {
+        height: 15%;
+        width: 40%;
+    }
+
+    .navList {
+        display: none;
+    }
+
+    .nav1 {
+        width: 100%;
+        margin-right: 0%;
+        /* background-color: red; */
+        height: 90vh;
+    }
+
+
+
+    .ulList {
+        height: 50vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 4%;
+        box-sizing: border-box;
+        justify-content: space-between;
+        padding-bottom: 2%;
+    }
+
+    .ulList .button {
+        height: 20vh;
+        width: 40%;
+    }
+
+
+    .imageIcon {
+        height: 8vh;
+        width: 100%;
+        margin-left: 2%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        object-fit: contain;
+    }
+
+    .imageIcon .img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .lineBox {
+        display: flex;
+        background-color: black;
+        height: 8vh;
+        width: 12%;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        right: var(--hamburgerMargin-right);
+    }
+
+    .line {
+        width: var(--lineWidth);
+        height: var(--lineHeight);
+        border-radius: var(--borderRadius);
+        background-color: var(--bgColor);
+        transition: all 500ms ease-in-out;
+    }
+
+    .line::before,
+    .line::after {
+        position: absolute;
+        content: "";
+        width: var(--lineWidth);
+        height: var(--lineHeight);
+        border-radius: var(--borderRadius);
+        background-color: var(--bgColor);
+        transition: all 500ms ease-in-out;
+    }
+
+    .line::before {
+        transform: translateY(-1.2vh);
+    }
+
+    .line::after {
+        transform: translateY(1.2vh);
+    }
+
+    .change {
+        position: absolute;
+        display: flex;
+        background-color: rebeccapurple;
+        height: 8vh;
+        width: 12%;
+        box-sizing: border-box;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        right: var(--hamburgerMargin-right);
+    }
+
+    .change .line {
+        background-color: transparent;
+    }
+
+    .change .line::before {
+        transform: rotate(-45deg);
+    }
+
+    .change .line::after {
+        transform: rotate(45deg);
+    }
+}
