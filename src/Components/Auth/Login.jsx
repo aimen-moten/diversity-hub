@@ -10,6 +10,7 @@ const Login = () => {
 
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
+    const [isLoading,setIsLoading]=useState(false);
 
 
     const onShowPasswordClickListener = () => {
@@ -25,19 +26,23 @@ const Login = () => {
         formData.append("password", password);
 
         try {
+            setIsLoading(true);
             const response = await axios.post("https://wicsapi.herokuapp.com/signin", formData, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 withCredentials: true
             })
+            
             if (response) {
                 const token=response.data.token
                 localStorage.setItem('auth',token)
                 navigate("/")
             }
+            setIsLoading(false);
 
         } catch (err) {
+            setIsLoading(false);
             console.log(err);
         }
     }
@@ -76,7 +81,7 @@ const Login = () => {
                                 Sign up
                             </NavLink>
                         </p> */}
-                        <button className=' h-[7vh] w-[40%] text-white hover:bg-[#0c2340d2] text-md hover:shadow-md hover:shadow-black font-bold mt-5 bg-[#0c2340] rounded-xl' type='submit'>Login</button>
+                        {isLoading?<div className=' h-[7vh] w-[40%] text-white bg-[#8b1c1c] rounded-xl flex justify-center items-center'>Login.....</div>:<button className=' h-[7vh] w-[40%] text-white hover:bg-[#0c2340d2] text-md hover:shadow-md hover:shadow-black font-bold mt-5 bg-[#0c2340] rounded-xl' type='submit'>Login</button>}
                     </form>
                 </div>
             </div>
