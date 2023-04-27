@@ -1,0 +1,105 @@
+.about-div {
+    background-color: #D2DAFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.about-title {
+    font-size: 36px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-style: italic;
+    max-width: 90%;
+}
+
+.about-text{
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    margin: 10px 0 20px;
+    /* font-style: italic; */
+    max-width: 90%;
+}
+
+.mission{
+    background-color: #EEF1FF;
+}
+
+.mission > h1 {
+    font-size: 44px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    /* padding: 5%; */
+    text-align: center;
+}
+
+.mission > p {
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    margin: auto;
+    padding-bottom: 5%;
+    text-align: center;
+    max-width: 80%;
+}
+
+/* Center align the section */
+.section-values {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+    font-family: 'Playfair Display', serif;
+    background-color: #D2DAFF;
+  }
+  
+  /* Style the h1 element */
+  .section-values h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the h3 elements to display as cards */
+  .card-values {
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    background-color: #AAC4FF;
+    margin: 10px;
+    padding: 6% 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+  }
+
+  .card-values > p {
+    margin: 0 ;
+    font-size: 24px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .card-values:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Turn the h3 elements into a carousel */
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .footer{
+    height: 40px;
+  }
