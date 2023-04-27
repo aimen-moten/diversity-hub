@@ -17,6 +17,17 @@
     background-color: #D2DAFF;
 } */
 
+
+@media (max-width: 481px) {
+    .text{
+        height: 90%;
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 @keyframes textanimate {
     0% {
         background-position: 0 50%;
