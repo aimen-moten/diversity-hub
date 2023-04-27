@@ -12,7 +12,7 @@ const Community = () => {
     const fetchClub=useCallback(async()=>{
        try{
         setIsLoading(true)
-        const response=await axios.get("http://localhost:3001/clubs");
+        const response=await axios.get("https://wicsapi.herokuapp.com/clubs");
         if(response){
             setClubs(response.data.message)
             setIsLoading(false)
@@ -62,7 +62,7 @@ const Community = () => {
                 <div className=' h-[10vh] w-[100%] flex justify-center items-center text-3xl mt-[10vh] font-[600]'><p>Communities To Join</p></div>
                 <div className=' min-h-[40vh] w-[100%] flex md:flex-row flex-col md:flex-wrap items-center md:justify-center mt-10 mb-10'>
                     {isLoading?<p>Loading....</p>:clubs.length==0?<div>Nothing to Show</div>:clubs.map((item) => {
-                        return <div className='md:m-[5px] md:h-[60vh] md:w-[30%] h-[40vh]  w-[90%] flex flex-col items-center mt-5 rounded-md bg-gray-200'>
+                        return <div key={item.id} className='md:m-[5px] md:h-[60vh] md:w-[30%] h-[40vh]  w-[90%] flex flex-col items-center mt-5 rounded-md bg-gray-200'>
                             <img src={item.clubImage} alt='This is a dummy Image' className='h-[40%] w-[100%] object-contain' />
                             <p className=' text-black h-[10%] w-[100%] text-[1.1rem] flex justify-center items-center font-bold font-sans'>{item.clubName}</p>
                             <div className='w-[95%] text-center text-clip line-clamp-3'>
