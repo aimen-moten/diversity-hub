@@ -1,0 +1,33 @@
+.job-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 10% auto;
+    padding: 80px;
+}
+
+.job-card {
+    width: 30%;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    background-color: whitesmoke;
+}
+
+.job-card-body{
+    padding: 20px;
+}
+
+.job-card-img{
+    width: 60%;
+    align-items: center;
+    height: auto;
+    max-height: 60%;
+}
+
+.job-card-title{
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
