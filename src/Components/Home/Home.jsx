@@ -94,7 +94,7 @@ const Home = () => {
                         <Swiper className=' h-[100%] w-[100%] transition-all 150ms'
                
                             modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
-                            slidesPerView={4}
+                            slidesPerView={3}
                             loop={true}
                             autoplay={
                                 {
@@ -106,8 +106,8 @@ const Home = () => {
                         // pagination={{ clickable: true }}
                         >
                             {dataJson.map((item) => {
-                                return <SwiperSlide key={item.id} className=' h-[90%] w-[20%] rounded-xl mr-5 bg-white'>
-                                <div className=' h-[80%] w-[100%]'>
+                                return <SwiperSlide key={item.id} className=' h-[60%] md:h-[90%] w-[80%]  md:w-[20%] rounded-xl mr-5 bg-white'>
+                                <div className=' h-[80%] w-[100%] flex justify-center items-center'>
                                     <img src={item.coverImage} alt={item.name} className=' h-[90%] w-[90%] object-contain'/>
                                 </div>
                                 <p className=' text-xl font-bold h-[20%] w-[100%] flex justify-center items-center'>{item.name}</p>
