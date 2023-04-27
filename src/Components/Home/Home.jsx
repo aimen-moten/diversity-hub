@@ -16,7 +16,7 @@ const Home = () => {
     return (
         <div className={classes.bg}>
             <div className='p-0 m-[0px] min-h-[80vh] w-[100%] flex items-center justify-between flex-col'>
-                <div className=' h-[90vh] w-[100%] flex flex-row md:flex-row'>
+                <div className=' h-[90vh] w-[100%] flex  md:flex-row flex-col'>
                     <div className=' h-[80vh] w-[40%] text-[3.0rem] pl-5 text-black font-bold justify-center items-center flex'>
                         <div className={classes.text}>
                             The largest community of tomorrow's builders.

@@ -13,9 +13,9 @@
     -webkit-user-select: none;
     animation: textanimate 6s infinite reverse;
 }
-.bg {
+/* .bg {
     background-color: #D2DAFF;
-}
+} */
 
 @keyframes textanimate {
     0% {

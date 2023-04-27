@@ -5,7 +5,7 @@ import dummyImg from "../../assets/udemy.svg"
 
 const Community = () => {
     return (
-        <div className=' min-h-[90vh] w-[100%]'>
+        <div className=' min-h-[90vh] w-[100%] pt-5'>
             <div className=' h-[90vh] w-[100%] flex md:flex-col flex-col  items-center justify-center'>
                 <div className=' md:h-[60%] md:w-[100%] flex justify-center items-center h-[60%] w-[100%]'>
                     <img src={communityImg} alt='community image' className=' h-[100%] w-[95%] object-contain' />
