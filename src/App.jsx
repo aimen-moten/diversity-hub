@@ -5,11 +5,11 @@ import Home from "./Components/Home/Home"
 import { Route, Routes } from "react-router"
 import Community from "./Components/community/Community"
 import Mentor from "./Components/Mentor/Mentor"
-import AboutUs from "./Components/AboutUs/AboutUs"
-import JobBoard from "./Components/JobBoard/JobBoard"
+
 
 function App() {
-
+  const token=Cookies.get("_uj1")
+  setAuthToken(token)
   return (
     <div className={classes.rootScreen}>
       {/* <Nav/> */}
@@ -18,8 +18,6 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/communities" element={<Community/>}/>
           <Route path="/mentors" element={<Mentor/>}/>
-          <Route path="/about" element={<AboutUs/>}/>
-          <Route path="/jobs" element={<JobBoard/>}/>
       </Routes>
     </div>
   )
