@@ -14,7 +14,9 @@ export default function NavigationBar() {
     navigate("/")
   }
 
-  
+  const onNavClick = () => {
+      setIsClicked(false);
+  };
 
   useEffect(()=>{
 
@@ -50,19 +52,19 @@ export default function NavigationBar() {
         className={`w-full block flex-grow  lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}
       >
         <div className="text-sm lg:flex-grow flex justify-around flex-col md:flex-row">
-          <NavLink to={"/"} className="md:hover:text-[royalblue] block mt-4 lg:inline-block lg:mt-0 font-semibold text-md hover:text mr-4">
+          <NavLink onClick={onNavClick} to={"/"} className="md:hover:text-[royalblue] block mt-4 lg:inline-block lg:mt-0 font-semibold text-md hover:text mr-4">
             Home
           </NavLink>
-          <NavLink to={"/about"} className="md:hover:text-[royalblue] block mt-4 lg:inline-block lg:mt-0 font-semibold text-md text-white-200 mr-4">
+          <NavLink onClick={onNavClick} to={"/about"} className="md:hover:text-[royalblue] block mt-4 lg:inline-block lg:mt-0 font-semibold text-md text-white-200 mr-4">
             About Us
           </NavLink>
-          <NavLink to={"/communities"} className="md:hover:text-[royalblue] block mt-4 lg:inline-block lg:mt-0 font-semibold text-md text-white-200 mr-4">
+          <NavLink onClick={onNavClick} to={"/communities"} className="md:hover:text-[royalblue] block mt-4 lg:inline-block lg:mt-0 font-semibold text-md text-white-200 mr-4">
             Community
           </NavLink>
-          <NavLink to={"/jobs"} className="md:hover:text-[royalblue] block mt-4 lg:inline-block lg:mt-0 font-semibold text-md text-white-200 mr-4">
+          <NavLink onClick={onNavClick} to={"/jobs"} className="md:hover:text-[royalblue] block mt-4 lg:inline-block lg:mt-0 font-semibold text-md text-white-200 mr-4">
             Find work
           </NavLink>
-          <NavLink to={"/mentors"} className="md:hover:text-[royalblue] block mt-4 lg:inline-block lg:mt-0 font-semibold text-md text-white-200 mr-4">
+          <NavLink onClick={onNavClick} to={"/mentors"} className="md:hover:text-[royalblue] block mt-4 lg:inline-block lg:mt-0 font-semibold text-md text-white-200 mr-4">
             Mentors
           </NavLink>
         </div>

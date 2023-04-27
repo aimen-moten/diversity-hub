@@ -1,9 +1,40 @@
-import React from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import communityImg from "../../assets/community.svg"
 import ganduImage from "../../assets/sam.jpg"
 import dummyImg from "../../assets/udemy.svg"
+import axios from "axios"
 
 const Community = () => {
+
+    const [clubs,setClubs]=useState([]);
+    const [isLoading,setIsLoading]=useState(false)
+
+    const fetchClub=useCallback(async()=>{
+       try{
+        setIsLoading(true)
+        const response=await axios.get("http://localhost:3001/clubs");
+        if(response){
+            setClubs(response.data.message)
+            setIsLoading(false)
+        }else{
+            setIsLoading(false)
+        }
+       }catch{
+            setClubs([])
+            setIsLoading(false)
+       }
+    })
+
+    useEffect(()=>{
+        
+        fetchClub()
+
+    },[])
+
+
+
+
+
     return (
         <div className=' min-h-[90vh] w-[100%] pt-5'>
             <div className=' h-[90vh] w-[100%] flex md:flex-col flex-col  items-center justify-center'>
@@ -30,18 +61,18 @@ const Community = () => {
             <div className=' min-h-[40vh] w-[100%]'>
                 <div className=' h-[10vh] w-[100%] flex justify-center items-center text-3xl mt-[10vh] font-[600]'><p>Communities To Join</p></div>
                 <div className=' min-h-[40vh] w-[100%] flex md:flex-row flex-col md:flex-wrap items-center md:justify-center mt-10 mb-10'>
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 8].map((item) => {
+                    {isLoading?<p>Loading....</p>:clubs.length==0?<div>Nothing to Show</div>:clubs.map((item) => {
                         return <div className='md:m-[5px] md:h-[60vh] md:w-[30%] h-[40vh]  w-[90%] flex flex-col items-center mt-5 rounded-md bg-gray-200'>
-                            <img src={dummyImg} alt='This is a dummy Image' className='h-[40%] w-[100%] object-contain' />
-                            <p className=' text-black h-[10%] w-[100%] text-[1.1rem] flex justify-center items-center font-bold font-sans'>CSOC</p>
+                            <img src={item.clubImage} alt='This is a dummy Image' className='h-[40%] w-[100%] object-contain' />
+                            <p className=' text-black h-[10%] w-[100%] text-[1.1rem] flex justify-center items-center font-bold font-sans'>{item.clubName}</p>
                             <div className='w-[95%] text-center text-clip line-clamp-3'>
                                 <p className=' text-black text-sm font-sans'>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at pulvinar eros. Phasellus dictum fringilla cursus. Vestibulum efficitur, enim nec tempus vulputate, tortor turpis aliquam arcu, id lacinia enim tortor ac nisi. Aliquam sodales et nisl sit amet imperdiet. Quisque consequat commodo enim. Suspendisse molestie viverra aliquam. Duis pretium imperdiet ipsum, ac molestie nunc convallis non. Vivamus sapien mi, vulputate vitae tempor ac, egestas a tellus.
+                                    {item.clubDescription}
                                 </p>
                             </div>
                             <div className=' h-[15%] w-[100%]  rounded-xl flex justify-around items-center mt-5'>
-                                <div className=' h-[80%] w-[40%] hover:bg-[#203165] rounded-lg bg-[royalblue] flex justify-center font-medium text-lg text-white items-center cursor-pointer select-none'>Join</div>
-                                <div className=' h-[80%] w-[40%] hover:bg-[#203165] rounded-lg bg-[royalblue] flex justify-center font-medium text-lg text-white items-center cursor-pointer select-none'>More</div>
+                                <a href={item.clubPageLink} traget="_" className=' h-[80%] w-[40%] hover:bg-[#203165] rounded-lg bg-[royalblue] flex justify-center font-medium text-lg text-white items-center cursor-pointer select-none'>Join</a>
+                                <a href={item.socialLink} target='_' className=' h-[80%] w-[40%] hover:bg-[#203165] rounded-lg bg-[royalblue] flex justify-center font-medium text-lg text-white items-center cursor-pointer select-none'>More</a>
                             </div>
                         </div>
                     })}
