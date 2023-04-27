@@ -5,6 +5,9 @@ import Home from "./Components/Home/Home"
 import { Route, Routes } from "react-router"
 import Community from "./Components/community/Community"
 import Mentor from "./Components/Mentor/Mentor"
+import Cookies from "js-cookie"
+import { setAuthToken } from "./utils/setHeaders"
+import Login from "./Components/Auth/Login"
 
 
 function App() {
@@ -18,6 +21,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/communities" element={<Community/>}/>
           <Route path="/mentors" element={<Mentor/>}/>
+          <Route path="/signin" element={<Login/>}/>
       </Routes>
     </div>
   )

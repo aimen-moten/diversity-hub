@@ -25,7 +25,7 @@ const Login = () => {
         formData.append("password", password);
 
         try {
-            const response = await axios.post("http://localhost:3001/signin", formData, {
+            const response = await axios.post("https://wicsapi.herokuapp.com/signin", formData, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
