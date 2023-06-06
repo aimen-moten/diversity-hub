@@ -9,7 +9,7 @@
 /* Landing Section  */
 
 .container {
-  margin: 10% auto;
+  margin: 0 auto;
   padding: 40px;
   max-width: 100%;
   display: flex;
@@ -18,7 +18,7 @@
 }
 
 .landing {
-  background-color: aliceblue;
+  background-color: #D2DAFF;
 }
 
 .left-item {
@@ -59,16 +59,25 @@
 }
 
 /* Mentor Profiles */
+.mentor-header {
+  font-size: 44px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    padding-top: 5%;
+    padding-bottom: 0;
+    /* padding: 5%; */
+    text-align: center;
+}
 
 .mentor-profile{
-  background-color: aliceblue;
+  background-color: #EEF1FF;
 }
 
   .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin: 10% auto;
+    margin: 0 auto;
     padding: 80px;
   }
   
@@ -78,7 +87,7 @@
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     overflow: hidden;
-    background-color: whitesmoke;
+    background-color: #AAC4FF;
   }
   
   .card-img {

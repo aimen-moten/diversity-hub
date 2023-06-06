@@ -72,7 +72,7 @@ export default function NavigationBar() {
           {
             isToken ? <div onClick={onLogoutHandler} className=' cursor-pointer inline-flex items-center md:mt-0 mt-4 bg-[royalblue] border-0 py-2 px-4 rounded-md text-white'>Logout</div>
               : <NavLink to={"/signin"} className="inline-flex items-center md:mt-0 mt-4 bg-[royalblue] border-0 py-2 px-4 rounded-md text-white">
-                Signin
+                Sign In
               </NavLink>
           }
         </div>

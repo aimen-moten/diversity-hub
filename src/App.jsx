@@ -16,6 +16,7 @@ function App() {
   const token=Cookies.get("_uj1")
   setAuthToken(token)
   return (
+    <div className={classes.complete}>
     <div className={classes.rootScreen}>
       {/* <Nav/> */}
       <NavigationBar/>
@@ -28,6 +29,7 @@ function App() {
           <Route path="/signin" element={<Login/>}/>
 
       </Routes>
+    </div>
     </div>
   )
 }

@@ -3,6 +3,7 @@ import React from "react";
 export default function CardContent(props){
     return (
         <div className="card-body">
+            <img src={props.image} className="job-card-img" />
             <p className="card-title"><b>{props.name}</b></p>
             <div>
                 <p><b>Company: </b>{props.company}</p>

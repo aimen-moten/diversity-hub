@@ -3,6 +3,7 @@ import homeImage from "../../assets/home.svg";
 import classes from "./Home.module.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore,{Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper';
+import "./Home.css";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -74,7 +75,7 @@ const dataJson=[
 const Home = () => {
     return (
         <div className={classes.bg}>
-            <div className='p-0 m-[0px] min-h-[80vh] w-[100%] flex items-center justify-between flex-col'>
+            <div className='p-0 m-[0px] min-h-[80vh] w-[100%] flex items-center justify-between flex-col bg-whitish-purple'>
                 <div className=' h-[90vh] w-[100%] flex  md:flex-row flex-col'>
                     <div className=' h-[80vh] w-[90%] md:w-[40%] text-[3.0rem] pl-5 text-black font-bold justify-center items-center flex '>
                         <div className={classes.text}>
@@ -86,8 +87,8 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className=' h-[60vh] w-[100%] bg-blue-50 flex flex-col'>
-                    <div className=' h-[40%] w-[100%] flex justify-center items-center  text-lg font-sans font-bold'>
+                <div className=' h-[60vh] w-[100%] bg-light-blueXlavender flex flex-col'>
+                    <div className=' h-[40%] w-[100%] flex justify-center items-center  font-bold text-5xl'>
                         Where our recuriters come from
                     </div>
                     <div className=' h-[60%] w-[100%]'>

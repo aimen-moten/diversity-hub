@@ -12,6 +12,8 @@
     user-select: none;
     -webkit-user-select: none;
     animation: textanimate 6s infinite reverse;
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
 }
 /* .bg {
     background-color: #D2DAFF;
