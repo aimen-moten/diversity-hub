@@ -21,16 +21,14 @@ Back-end (currently in progress) built using:
 <img width="1440" alt="Screenshot 2023-06-07 at 11 17 39 PM" src="https://github.com/aimen-moten/diversity-hub/assets/115741361/011b556f-93b3-4199-b99b-861d515f198d">
 
 <img width="1440" alt="Screenshot 2023-06-07 at 11 17 44 PM" src="https://github.com/aimen-moten/diversity-hub/assets/115741361/d7e7e480-c457-4bbf-885e-2e1bcc4a276e">
-<img width="1440" alt="Screenshot 2023-06-07 at 11 17 58 PM" src="https://github.com/aimen-<img width="1440" alt="Screenshot 2023-06-07 at 11 18 06 PM" src="https://github.com/aimen-moten/diversity-hub/assets/115741361/2af97499-732d-4276-8705-0b56f685c419">
-moten/diversity-hub/assets/115741361/1743fce2-3f5d-4637-869a-aade6d653ddf">
+
 <img width="1440" alt="Screenshot 2023-06-07 at 11 18 01 PM" src="https://github.com/aimen-moten/diversity-hub/assets/115741361/0fcf7afb-d432-4862-8216-c41e9919cc2c">
 
 <img width="1434" alt="Screenshot 2023-06-07 at 11 18 30 PM" src="https://github.com/aimen-moten/diversity-hub/assets/115741361/d689a2b8-e1f8-4743-9539-bb6f1461a9d3">
 <img width="1440" alt="Screenshot 2023-06-07 at 11 18 33 PM" src="https://github.com/aimen-moten/diversity-hub/assets/115741361/a47c2fa1-8256-46a4-ba7c-38a295daef4e">
 
 <img width="1440" alt="Screenshot 2023-06-07 at 11 18 39 PM" src="https://github.com/aimen-moten/diversity-hub/assets/115741361/697a1aab-48b8-4960-9c5e-7caf5baf8b1c">
-<img width="1440" alt="Screenshot 2023-06-07 at 11 19 09 PM" src="https://github.c<img width="1440" alt="Screenshot 2023-06-07 at 11 19 17 PM" src="https://github.com/aimen-moten/diversity-hub/assets/115741361/af0e2dc2-e87a-4688-b9c3-07900f535d54">
-om/aimen-moten/diversity-hub/assets/115741361/07475ada-6c79-4ae6-9959-915cc364b303">
+
 <img width="1440" alt="Screenshot 2023-06-07 at 11 19 12 PM" src="https://github.com/aimen-moten/diversity-hub/assets/115741361/c3931688-c883-4b5b-bd25-e65128858d81">
 <img width="1440" alt="Screenshot 2023-06-07 at 11 19 17 PM" src="https://github.com/aimen-moten/diversity-hub/assets/115741361/6265c89a-9a25-4677-9571-bdcfcbe77bad">
 <img width="1440" alt="Screenshot 2023-06-07 at 11 19 20 PM" src="https://github.com/aimen-moten/diversity-hub/assets/115741361/8c9790e1-a16b-460a-94a1-ded966dea778">
